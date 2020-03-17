@@ -1,0 +1,16 @@
+.footer-container{
+    height: 5rem;
+    background-color: lightcoral;
+    div{
+        display: flex;
+        background-color: lightcyan;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        font-size: 5vw;
+        font-family: monospace;
+        text-transform: capitalize;
+        text-shadow: 2px 2px 4px #0c576e;
+    }
+}
