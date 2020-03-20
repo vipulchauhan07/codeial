@@ -1,17 +1,19 @@
 <header class="header-container header-font-family">
     <h1>codeial</h1>
-    <ul>
-        <% if (locals.user) {%>
+
+    <div>
+        <ul>
+            <% if (locals.user) {%>
             <li>
                 <a href="/users/sign-in">
                     <%= user.name %>
-                </a>            
+                </a>
             </li>
             <li>
                 <a href="/users/sign-out">Sign Out</a>
             </li>
-        <% } else{%>
-        
+            <% } else{%>
+
             <li>
                 <a href="/users/sign-in">Sign In</a>
             </li>
@@ -19,8 +21,10 @@
             <li>
                 <a href="/users/sign-up">Sign Up</a>
             </li>
-        
-        <% } %>
 
-    </ul>
+            <% } %>
+
+        </ul>
+    </div>
+
 </header>

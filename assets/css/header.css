@@ -26,7 +26,6 @@
     align-items: center; }
   .header-container li {
     width: 5em;
-    display: inline-block;
     list-style: none;
     font-weight: lighter; }
   .header-container a {

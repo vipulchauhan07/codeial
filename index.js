@@ -73,6 +73,7 @@ app.use(passport.setAuthenticatedUser);
 // setting up flash
 app.use(flash());
 app.use(customMware.setFlash);
+
 // use express router
 app.use('/', require('./routes'));
 
