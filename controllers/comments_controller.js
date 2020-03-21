@@ -26,6 +26,8 @@ module.exports.create = async function(req, res) {
                     message: "Post created!"
                 });
             }
+
+
             req.flash('success', 'Comment published!');
             res.redirect('/');
         }
@@ -68,7 +70,7 @@ module.exports.destroy = async function(req, res) {
             return res.redirect('back');
         }
     } catch (err) {
-        req.flash('error', 'Unauthorized');
+        req.flash('error', err);
         // console.log('Error', err);
         return;
     }

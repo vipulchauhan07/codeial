@@ -31,8 +31,12 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 // for using static files
 app.use(express.static('./assets'));
-// use express express-ejs-layouts
 
+// make the uploads path available to the browser
+app.use('/uploads', express.static(__dirname + '/uploads'));
+
+
+// use express express-ejs-layouts
 app.use(expressLayouts);
 
 // extract style and scripts from sub pages into the layout
