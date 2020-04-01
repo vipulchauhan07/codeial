@@ -5,7 +5,7 @@ const User = require('../models/user');
 
 
 // tell passport to use a new startegy for google login
-passport.user(new googleStrategy({
+passport.use(new googleStrategy({
     clientID: '1068172412840-hllb7g5orvc71q3d16iqr3gvmmklf7pj.apps.googleusercontent.com',
     clientSecret: 'vf1H4TO-tmfT_idr6V9ndUdg',
     callbackURL: 'http://localhost:8000/users/auth/google/callback'
@@ -26,7 +26,7 @@ passport.user(new googleStrategy({
                 User.create({
                      name: profile.displayName,
                     email: profile.emails[0].value,
-                    passpword: crypto.randomBytes(20).toString('hex')
+                    password: crypto.randomBytes(20).toString('hex')
                 }, function(err, user){
                     if(err){console.log('error in creating user google strategy-passport', err); return;}
                     return done(null, user);
